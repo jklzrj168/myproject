@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.routeplandemo.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lront"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#60000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_drive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="driveMode"
+            android:text="驾车" />
+
+        <Button
+            android:id="@+id/btn_walk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="walkMode"
+            android:text="步行" />
+
+        <Button
+            android:id="@+id/btn_bus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="busMode"
+            android:text="公交" />
+
+        <Button
+            android:id="@+id/btn_ride"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="rideMode"
+            android:text="骑行" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/qizdian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lront"
+        android:background="#60000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startpoint"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:onClick="xqidiang"
+            android:text="选起点"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/endpoint"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:onClick="xzdiang"
+            android:text="选终点"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/addMarkers"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:onClick="addMarkers"
+            android:text="添加标记"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/daohang"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:onClick="daohang"
+            android:text="导航"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/qizdian" />
+    <ImageView
+        android:id="@+id/route_plan_loca_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginLeft="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selector_btn_loca"
+        android:src="@drawable/icon_c11"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
